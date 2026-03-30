@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  # Damn Vulnerable Web App (DVWA) Target
+  dvwa-target:
+    image: vulnerables/web-dvwa
+    container_name: pentest_dvwa
+    ports:
+      - "8080:80"
+    environment:
+      - PHP_DISPLAY_ERRORS=On
+    restart: unless-stopped
+    networks:
+      - pentest_net
+
+networks:
+  pentest_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.50.0/24
