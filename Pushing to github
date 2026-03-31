@@ -1,0 +1,21 @@
+# 1. Initialize the git repository
+git init Full-Scope-Pentest-Lab
+cd Full-Scope-Pentest-Lab
+
+# 2. Create the directories
+mkdir setup scripts reports
+
+# 3. Create your files (Copy/paste the code blocks above into these files)
+touch README.md setup/docker-compose.yml scripts/1_recon.sh scripts/2_nmap_parser.py scripts/3_exploit_smb.rc scripts/4_linux_privesc.sh reports/Final_Pentest_Report.md
+
+# 4. Make your scripts executable
+chmod +x scripts/*.sh scripts/*.py
+
+# 5. Add and commit your files
+git add .
+git commit -m "Initial commit: Full-Scope Pentest Lab architecture, scripts, and reporting templates"
+
+# 6. Push to your GitHub repository (Replace URL with your actual repo URL)
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/Full-Scope-Pentest-Lab.git
+git push -u origin main
